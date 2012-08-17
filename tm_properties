@@ -26,3 +26,6 @@ fileType        = "text.plain"
 [ source ]
 spellChecking   = false
 softWrap        = false
+
+[ Makefile ]
+softTabs        = false
