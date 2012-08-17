@@ -1,0 +1,28 @@
+tabSize         = 2
+softTabs        = true
+
+softWrap        = false
+wrapColumn      = 80
+showWrapColumn  = true
+
+showInvisibles  = true
+
+# variables
+TM_FULLNAME     = "Michael D. Galloy"
+TM_ORGANIZATION = "michaelgalloy.com"
+TM_GIT          = "/usr/local/bin/git"
+TM_HG           = "/usr/local/bin/hg"
+
+[ text ]
+softWrap        = true
+spellChecking   = true
+
+[ *.{txt,md,mdown,markdown,rst} ]
+softWrap        = true
+
+[ "{README,INSTALL,LICENSE,TODO,COPYING}" ]
+fileType        = "text.plain"
+
+[ source ]
+spellChecking   = false
+softWrap        = false

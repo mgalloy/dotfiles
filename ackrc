@@ -1,0 +1,5 @@
+--type-set=IDL=.pro
+--type-set=CUDA=.cu
+--type-set=DocBook=.docbook
+--ignore-dir=docbook-xml
+--ignore-dir=docbook-xsl
