@@ -1,0 +1,57 @@
+# set aliases
+alias f="mdfind -interpret"
+alias rm="rm -v"
+alias ll="ls -lhF"
+alias irc="ssh mgalloy@nucleus.txcorp.com -NL 1234:irc.freenode.net:6667"
+alias hl="highlight -I --font Monaco --style mgalloy"
+alias hlidl="highlight --syntax=pro -I --font Monaco --style mgalloy"
+alias topcpu="top -o cpu -stats pid,command,user,cpu,time,threads,csw,rsize,vsize,pageins"
+alias pylons_activate="source ~/software/pylons_env/bin/activate"
+
+# alias for login to various servers
+alias enrico="ssh -R 52698:localhost:52698 enrico"
+alias idldev="ssh -R 52698:localhost:52698 idldev.com"
+alias iter="ssh -R 52698:localhost:52698 iter"
+alias mg1="ssh mg1"
+alias mg2="ssh mg2"
+
+# quit an OS X application from the command line
+quit () {
+  for app in $*; do
+    osascript -e 'quit app "'$app'"'
+  done
+}
+
+# svn command with my default arguments
+s() {
+  case "$1" in
+    st|stat|status)
+      svnargs1=""
+      svnargs2="--ignore-externals"
+      for i in $@; do
+        if [ "--examine-externals" == "$i" ]; then
+          svnargs2=""
+        else
+          svnargs1="$svnargs1 $i"
+        fi
+      done
+      command svn $svnargs1 $svnargs2
+      ;;
+    *)
+      command svn "$@"
+      ;;
+  esac
+}
+
+# git command with some abbreviations
+g() {
+  case "$1" in
+    st|stat|status)
+      shift 1
+      command git status "$@"
+      ;;
+    *)
+      command git "$@"
+      ;;
+  esac
+}

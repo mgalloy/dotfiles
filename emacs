@@ -72,3 +72,4 @@
       (cons '("\\.c\\'" . c++-mode) auto-mode-alist))
 
 (add-to-list 'auto-mode-alist '("\\.cu$" . c-mode))
+(add-to-list 'auto-mode-alist '("\\.F90$" . fortran-mode))
