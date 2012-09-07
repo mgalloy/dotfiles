@@ -1,4 +1,5 @@
 # set aliases
+alias emacs="emacs -nw"
 alias f="mdfind -interpret"
 alias rm="rm -v"
 alias ll="ls -lhF"
