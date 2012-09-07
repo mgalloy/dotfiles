@@ -9,6 +9,10 @@ alias hlidl="highlight --syntax=pro -I --font Monaco --style mgalloy"
 alias topcpu="top -o cpu -stats pid,command,user,cpu,time,threads,csw,rsize,vsize,pageins"
 alias pylons_activate="source ~/software/pylons_env/bin/activate"
 
+if [ `uname` == 'Linux' ]; then
+  alias rmate="rmate --host=auto"
+fi
+
 # alias for login to various servers
 alias enrico="ssh -R 52698:localhost:52698 enrico"
 alias idldev="ssh -R 52698:localhost:52698 idldev.com"
