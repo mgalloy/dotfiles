@@ -1,28 +1,31 @@
-body, html { font-family: Verdana; font-size: 9pt; }
+body, html { font-family: Helvetica; font-size: 14pt; line-height: 1.75em; margin: 0 1.5em 0 1.5em; }
 
 pre { 
   font-family: Monaco; 
-  font-size: 9pt; 
+  font-size: 90%; 
   margin: 1em;
   padding: 1em;
   background: #eff2ff;
   border: 1px dotted #aaaaaa;
 }
 
-h1, h2 { font-weight: normal; color: #933; } 
-h1 { margin-top: 1.5em; font-size: 14pt; }
-h2 { font-size: 11pt; }
+h1, h2, h3 { font-weight: normal; color: #333; }
+h1 { margin-top: 1.5em; font-size: 1.5em; }
+h1.title { font-size: 2em; }
+h2 { font-size: 1.25em; }
+h3 { font-size: 1.0em; }
 
 ul { padding: 0em; }
 ul li { margin-left: 2em; }
 
-table, tr, td { font-size: 9pt; border: 0; }
-th { align: left; border: 0 0 1px 0; }
+table { align: center; }
+table, thead, th, tr, td { border: 0; }
+th { font-weight: bold; align: center; border-bottom: 1px; }
 
-dd { color: #666666; font-style: italic; font-size: 8pt; margin-left: 2em; }
-blockquote { font-size: 9pt; line-height: 1.5; font-style: italic; }
+dd { color: #666666; font-style: italic; font-size: 90%; margin-left: 2em; }
+blockquote { font-size: 90%; line-height: 1.5; font-style: italic; }
 
-cite { font-family: Monaco; font-style: normal; font-size: 9pt; }
+cite { font-family: Monaco; font-style: normal; font-size: 90%; }
 
 .docinfo-name { display: none; }
-.docinfo { color: #933; font-style: italic; }
+.docinfo { color: #666; font-style: italic; }
