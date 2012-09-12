@@ -1,0 +1,18 @@
+[general]
+source-link: no
+datestamp:
+generator: off
+
+[html4css1 writer]
+stylesheet-path: /Users/mgalloy/.default.css
+embed-stylesheet: yes
+table_style: borderless
+
+[latex2e writer]
+documentoptions: 11pt
+use_latex_citations: on
+use_latex_abstract: on
+use_latex_docinfo: on
+use_latex_toc: on
+table_style: booktabs
+stylesheet: mgalloy
