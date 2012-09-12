@@ -7,6 +7,7 @@ pre {
   padding: 1em;
   background: #eff2ff;
   border: 1px dotted #aaaaaa;
+  line-height: 1.25em;
 }
 
 h1, h2, h3 { font-weight: normal; color: #333; }
@@ -18,12 +19,12 @@ h3 { font-size: 1.0em; }
 ul { padding: 0em; }
 ul li { margin-left: 2em; }
 
-table { align: center; }
+table.docutils { margin-left: auto; margin-right: auto; }
 table, thead, th, tr, td { border: 0; }
-th { font-weight: bold; align: center; border-bottom: 1px; }
+th { font-weight: bold; text-align: center; }
 
 dd { color: #666666; font-style: italic; font-size: 90%; margin-left: 2em; }
-blockquote { font-size: 90%; line-height: 1.5; font-style: italic; }
+blockquote { font-size: 90%; line-height: 1.5em; font-style: italic; }
 
 cite { font-family: Monaco; font-style: normal; font-size: 90%; }
 
