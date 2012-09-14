@@ -1,4 +1,5 @@
 # setup for keychain
+# TODO: should check for id_dsa, there is a different between laptop and desktop
 if [ -d /Volumes/keys ]; then
   DESKTOP=`uname -n`
   /usr/local/bin/keychain --quiet ~/.ssh/id_dsa
@@ -30,22 +31,6 @@ fi
 
 # setup IDL license
 export LM_LICENSE_FILE=1700@zrv.txcorp.com
-
-# setup path for HDF 5 tools
-if [ -d /usr/local/hdf5 ]; then
-  export PATH=/usr/local/hdf5/bin:$PATH
-else
-  echo "HDF 5 tools not found in /usr/local/hdf5"
-fi
-
-# setup ImageMagick
-export MAGICK_HOME=$HOME/lib/ImageMagick-6.4.4
-if [ -d $MAGICK_HOME ]; then
-  export DYLD_LIBRARY_PATH=$MAGICK_HOME/lib
-  export PATH=$MAGICK_HOME/bin:$PATH
-else
-  echo "ImageMagick not present in $MAGICK_HOME"
-fi
 
 # add TeX tools to path
 if [ -d /usr/local/texlive/2012/bin/x86_64-darwin ]; then
