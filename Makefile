@@ -12,4 +12,4 @@ install:
 	cp default.css ~/.default.css
 	cp docutils ~/.docutils
 
-	cp `uname`_bash_profile ~/.bash_profile.test
+	cp `uname`_bash_profile ~/.bash_profile
