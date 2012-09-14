@@ -1,0 +1,98 @@
+# setup a better command line
+export PS1="\[\e]1;\h:\W\a\e]2;\h:\w\a\e[31;1m\]\W\$\[\e[0m\] "
+export CLICOLOR=1
+shopt -s histappend
+shopt -s checkwinsize
+export PROMPT_COMMAND='history -a'
+
+export EDITOR="emacs -nw"
+
+export PATH=.:$HOME/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
+
+# do machine specific initialization
+case `uname -n` in
+  edison.txcorp.com)
+    echo "Executing edison specific initialization..."
+
+    export PATH=$HOME/lib/emacs-22.3/bin:$PATH
+    export PYTHONPATH=$HOME/lib/python2.6/site-packages:~/lib64/python2.6/site-packages
+    export CUDA_DIR=/usr/local/cuda
+    ;;
+
+  mg1.txcorp.com|mg2.txcorp.com)
+    echo "Executing mg1/mg2 specific initialization..."
+    
+    export PYTHONPATH=$HOME/lib/python2.4/site-packages:~/lib64/python2.4/site-packages
+    export CUDA_DIR=/usr/local/cuda/4.0/cuda
+
+    # setup appliedem_kernel
+    export LD_LIBRARY_PATH=/usr/mpi/gcc/mvapich-1.2.0/lib/shared:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=/scr_3/gcc/gcc-4.4.6/lib64/:$LD_LIBRARY_PATH  
+    export PATH=/scr_3/gcc/gcc-4.4.6/bin:$PATH
+    export PATH=/usr/mpi/gcc/mvapich-1.2.0/bin:$PATH
+    ;;
+
+  volt.txcorp.com)
+    ;;
+
+  *)
+    echo "Logging into `uname -n`; no specific machine initialization present."
+
+    export CUDA_DIR=/usr/local/cuda
+    ;;
+esac
+
+# for bilder
+export MAIL_ADDRESS=mgalloy@txcorp.com
+
+# setup IDL license
+export LM_LICENSE_FILE=1700@ZRV.TXCORP.COM
+
+# setup CUDA
+if [ -n $CUDA_DIR ]; then
+  if [ -d $CUDA_DIR ]; then
+    export LD_LIBRARY_PATH=$CUDA_DIR/lib64:$LD_LIBRARY_PATH
+    export PATH=$CUDA_DIR/bin:$PATH
+  else
+    echo "CUDA not present in $CUDA_DIR"
+  fi
+fi
+
+# setup TaskDL
+export TASKDL2_DIR=$HOME/projects/taskdl-2.4/install
+if [ -d $TASKDL2_DIR ]; then
+  export PATH=$TASKDL2_DIR/bin:$PATH
+else
+  echo "TaskDL not present in $TASKDL2_DIR"
+fi
+
+# setup mpiDL
+export MPIDL_DIR=$HOME/projects/mpidl/install
+if [ -d $MPIDL_DIR ]; then
+  export PATH=$PATH:$MPIDL_DIR/bin
+else
+  echo "mpiDL not present in $MPIDL_DIR"
+fi
+
+# setup rIDL
+if [ -d $HOME/projects/ridl/install ]; then
+  export MANPATH=$HOME/projects/ridl/install/man
+else
+  echo "rIDL not present in $HOME/projects/ridl/install"
+fi
+
+# setup PGI compiler
+if [ -d /usr/local/pgiCDK-11.5/linux86-64/11.5/bin ]; then
+  export PATH=/usr/local/pgiCDK-11.5/linux86-64/11.5/bin:$PATH
+else
+  echo "PGI compiler not present"
+fi
+
+# setup PETSc
+export PETSC_ARCH=arch-linux2-cxx-debug
+export PETSC_DIR=/home/research/mgalloy/software/petsc-dev
+
+if [ -a $HOME/.aliases ]; then
+  source $HOME/.aliases
+fi

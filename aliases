@@ -2,7 +2,9 @@
 alias emacs="emacs -nw"
 alias f="mdfind -interpret"
 alias rm="rm -v"
-alias ls="ls --color=auto"
+if [ `uname` == 'Linux ']; then
+  alias ls="ls --color=auto"
+fi
 alias ll="ls -lhF"
 alias irc="ssh mgalloy@nucleus.txcorp.com -NL 1234:irc.freenode.net:6667"
 alias hl="highlight -I --font Monaco --style mgalloy"
