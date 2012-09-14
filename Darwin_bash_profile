@@ -70,7 +70,7 @@ else
   echo "TaskDL not present in $TASKDL2_DIR"
 fi
 
-# setup GPULib
+# setup CUDA
 if [ -d /usr/local/cuda ]; then
   export PATH=/usr/local/cuda/bin:$PATH
 else
@@ -90,7 +90,7 @@ export ARCHFLAGS="-arch x86_64"
 source /usr/local/etc/bash_completion
 
 if [ -a $HOME/.aliases ]; then
-  source .aliases
+  source $HOME/.aliases
 else
   echo "Aliases not present in $HOME/.aliases"
 fi

@@ -2,7 +2,7 @@
 alias emacs="emacs -nw"
 alias f="mdfind -interpret"
 alias rm="rm -v"
-if [ `uname` == 'Linux ']; then
+if [ `uname` == 'Linux ' ]; then
   alias ls="ls --color=auto"
 fi
 alias ll="ls -lhF"
