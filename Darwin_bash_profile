@@ -1,6 +1,5 @@
 # setup for keychain
-# TODO: should check for id_dsa, there is a different between laptop and desktop
-if [ -d /Volumes/keys ]; then
+if [ -a $HOME/.ssh/id_dsa ]; then
   DESKTOP=`uname -n`
   /usr/local/bin/keychain --quiet ~/.ssh/id_dsa
   source $HOME/.keychain/$DESKTOP-sh
