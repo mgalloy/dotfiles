@@ -19,7 +19,7 @@ export PROMPT_COMMAND='history -a'
 export MAIL_ADDRESS=mgalloy@txcorp.com
 
 export EDITOR="emacs -nw"
-export PATH=.:$HOME/bin:/usr/local/bin:/usr/games:$PATH
+export PATH=.:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/games:$PATH
 
 if [ -d /usr/local/lib/python2.7 ]; then
   export PYTHONPATH=/usr/local/lib/python2.7/site-packages
