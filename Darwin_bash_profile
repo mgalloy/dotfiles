@@ -64,7 +64,7 @@ fi
 
 # setup rIDL
 if [ -d $HOME/projects/ridl/install ]; then
-  export MANPATH=$HOME/projects/ridl/install/man
+  export MANPATH=$HOME/projects/ridl/install/man:$MANPATH
 else
   echo "rIDL not installed in $HOME/projects/ridl/install"
 fi
