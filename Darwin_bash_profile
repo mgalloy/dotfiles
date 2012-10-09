@@ -81,3 +81,9 @@ else
   echo "Aliases not present in $HOME/.aliases"
 fi
 
+if [ -a $HOME/git-completion.bash ]; then
+  source $HOME/git-completion.bash
+else
+  echo "git completion not present"
+fi
+
