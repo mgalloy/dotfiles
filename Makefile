@@ -13,3 +13,4 @@ install:
 	cp docutils ~/.docutils
 	cp git-completion.bash ~/.git-completion.bash
 	cp `uname`_bash_profile ~/.bash_profile
+	cp bashrc ~/.bashrc
