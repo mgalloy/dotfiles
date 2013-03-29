@@ -23,8 +23,6 @@ if [ `uname` == 'Linux' ]; then
       alias idl82="/usr/local/itt/idl/idl82/idl82/bin/idl"
       ;;
     mg1.txcorp.com|mg2.txcorp.com)
-      alias idl="/usr/local/itt/idl/idl/bin/idl"
-      alias idl81="/usr/local/itt/idl/idl81/bin/idl"
       ;;
     enrico.txcorp.com)
       alias idl="/usr/local/itt/idl/idl/bin/idl"
