@@ -2,7 +2,7 @@
 	name = Michael Galloy
 	email = mgalloy@gmail.com
 [core]
-	excludesfile = ~mgalloy/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = emacs -nw
 	autocrlf = input
 [difftool "sourcetree"]
