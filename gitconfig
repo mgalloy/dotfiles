@@ -1,9 +1,9 @@
 [user]
 	name = Michael Galloy
-	email = mgalloy@txcorp.com
+	email = mgalloy@gmail.com
 [core]
-	excludesfile = /Users/mgalloy/.gitignore_global
-	editor = emacs
+	excludesfile = ~mgalloy/.gitignore_global
+	editor = emacs -nw
 	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
