@@ -41,7 +41,7 @@ else
 fi
 
 # setup mpiDL
-export MPIDL_DIR=$HOME/projects/mpidl/install
+export MPIDL_DIR=$HOME/projects/mpidl-install
 if [ -d $MPIDL_DIR ]; then
   export PATH=$MPIDL_DIR/bin:$PATH
 else
