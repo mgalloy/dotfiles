@@ -14,3 +14,4 @@ install:
 	cp git-completion.bash ~/.git-completion.bash
 	cp `uname`_bash_profile ~/.bash_profile
 	cp bashrc ~/.bashrc
+	cp subversion_config ~/.subversion/config
