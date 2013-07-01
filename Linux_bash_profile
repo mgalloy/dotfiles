@@ -112,3 +112,7 @@ else
     echo "git completion not present"
   fi
 fi
+
+if [ -d ~/mgalloy/data/ASDC_archive ]; then
+  export ASDC_DIR=~/mgalloy/data/ASDC_archive
+fi
