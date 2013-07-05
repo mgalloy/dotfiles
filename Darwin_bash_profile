@@ -87,7 +87,3 @@ if [ -a $HOME/.git-completion.bash ]; then
 else
   echo "git completion not present"
 fi
-
-if [ -d $HOME/data/ASDC_archive ]; then
-  export ASDC_DIR=~/mgalloy/data/ASDC_archive
-fi
