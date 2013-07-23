@@ -35,7 +35,7 @@ export LM_LICENSE_FILE=1700@zrv.txcorp.com
 
 # add TeX tools to path
 if [ -d /usr/local/texlive/2013/bin/x86_64-darwin ]; then
-  export PATH=/usr/local/texlive/2012/bin/x86_64-darwin:$PATH
+  export PATH=/usr/local/texlive/2013/bin/x86_64-darwin:$PATH
 else
   echo "TeX Live not present"
 fi
