@@ -15,3 +15,4 @@ install:
 	cp `uname`_bash_profile ~/.bash_profile
 	cp bashrc ~/.bashrc
 	cp subversion_config ~/.subversion/config
+	cp ssh_config ~/.ssh/config
