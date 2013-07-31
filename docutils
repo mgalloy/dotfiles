@@ -16,3 +16,4 @@ use_latex_docinfo: on
 use_latex_toc: on
 table_style: booktabs
 stylesheet: mgalloy
+smart_quotes: yes
