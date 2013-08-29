@@ -10,7 +10,13 @@ else
 fi
 
 # setup command line environment
-export PS1="\[\e]1;\h:\W\a\e]2;\h:\w\a\e[34;1m\]\W\$\[\e[0m\] "
+from=`who am i | sed -n 's/.*(\(.*\))/\1/p'`
+echo $from
+if [ $from ]; then
+  export PS1="\[\e]1;\h:\W\a\e]2;\h:\w\a\e[31;1m\]\W\$\[\e[0m\] "
+else
+  export PS1="\[\e]1;\h:\W\a\e]2;\h:\w\a\e[34;1m\]\W\$\[\e[0m\] "
+fi
 export CLICOLOR=1
 shopt -s histappend
 shopt -s checkwinsize
