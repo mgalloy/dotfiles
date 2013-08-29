@@ -11,7 +11,6 @@ fi
 
 # setup command line environment
 from=`who am i | sed -n 's/.*(\(.*\))/\1/p'`
-echo $from
 if [ $from ]; then
   export PS1="\[\e]1;\h:\W\a\e]2;\h:\w\a\e[31;1m\]\W\$\[\e[0m\] "
 else
