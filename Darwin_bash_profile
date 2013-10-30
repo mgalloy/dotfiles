@@ -45,6 +45,14 @@ else
   echo "TeX Live not present"
 fi
 
+# setup mglib
+export MGLIB_DIR=$HOME/software/mglib
+if [ -d $MGLIB_DIR ]; then
+  export PATH=$MGLIB_DIR/bin:$PATH
+else
+  echo "mglib is not present in $MGLIB_DIR"
+fi
+
 # setup mpiDL
 export MPIDL_DIR=$HOME/projects/mpidl-install
 if [ -d $MPIDL_DIR ]; then
