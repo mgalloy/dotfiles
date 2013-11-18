@@ -101,3 +101,6 @@ if [ -a $HOME/.git-completion.bash ]; then
 else
   echo "git completion not present"
 fi
+
+# added by Anaconda 1.8.0 installer
+export PATH=~/anaconda/bin:$PATH
