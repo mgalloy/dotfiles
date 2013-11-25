@@ -114,3 +114,8 @@ if [ -d /Library/Frameworks/UnixImageIO.framework ]; then
   export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
   export PATH=/usr/local/pgsql/bin:$PATH
 fi
+
+# Spatialite Tools
+if [ -d /Users/mgalloy/software/spatialite-tools/tools ]; then
+  export PATH=/Users/mgalloy/software/spatialite-tools/tools:$PATH
+fi
