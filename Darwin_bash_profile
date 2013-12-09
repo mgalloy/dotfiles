@@ -54,7 +54,7 @@ else
 fi
 
 # setup mpiDL
-export MPIDL_DIR=$HOME/projects/mpidl-install
+export MPIDL_DIR=$HOME/software/mpidl-par
 if [ -d $MPIDL_DIR ]; then
   export PATH=$MPIDL_DIR/bin:$PATH
 else
@@ -104,3 +104,18 @@ fi
 
 # added by Anaconda 1.8.0 installer
 export PATH=~/anaconda/bin:$PATH
+
+# for GeoDjango KyngChaos packages
+if [ -d /Library/Frameworks/UnixImageIO.framework ]; then
+  export PATH=/Library/Frameworks/UnixImageIO.framework/Programs:$PATH
+  export PATH=/Library/Frameworks/PROJ.framework/Programs:$PATH
+  export PATH=/Library/Frameworks/GEOS.framework/Programs:$PATH
+  export PATH=/Library/Frameworks/SQLite3.framework/Programs:$PATH
+  export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
+  export PATH=/usr/local/pgsql/bin:$PATH
+fi
+
+# Spatialite Tools
+if [ -d /Users/mgalloy/software/spatialite-tools/tools ]; then
+  export PATH=/Users/mgalloy/software/spatialite-tools/tools:$PATH
+fi
