@@ -1,6 +1,17 @@
 ForwardAgent yes
-ForwardX11 yes
-ForwardX11Trusted yes
 HashKnownHosts yes
+
+Host idldev.com
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sandybridge enrico edison qalion *.txcorp.com
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
 Host svn.code.sf.net
- user michaelgalloy
+  User michaelgalloy
+
+Host github.com
+  ForwardX11 no
+  ForwardX11Trusted no
