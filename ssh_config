@@ -12,7 +12,7 @@ Host sandybridge enrico edison qalion *.txcorp.com
 Host svn.code.sf.net
   User michaelgalloy
 
-Host fieldwing.com
+Host fieldwingservices.com
   User fieldwin
 
 Host github.com
