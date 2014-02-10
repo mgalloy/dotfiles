@@ -10,6 +10,9 @@ set bell-style none
 # Note: to get rid of a line just Ctrl-C.
 "\e[B": history-search-forward
 "\e[A": history-search-backward
+"\e[C": forward-char
+"\e[D": backward-char
+
 set show-all-if-ambiguous on
 set completion-ignore-case on
 
