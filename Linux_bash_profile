@@ -36,6 +36,10 @@ case `uname -n` in
   volt.txcorp.com)
     ;;
 
+  sandybridge.txcorp.com)
+    export PATH=$HOME/software/anaconda/bin:$PATH
+    ;;
+
   *)
     echo "Logging into `uname -n`; no specific machine initialization present."
 
