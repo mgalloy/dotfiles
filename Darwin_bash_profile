@@ -77,10 +77,10 @@ else
 fi
 
 # setup rIDL
-if [ -d $HOME/projects/ridl/install ]; then
-  export MANPATH=$HOME/projects/ridl/install/share/man:$MANPATH
+if [ -d $HOME/software/ridl ]; then
+  export MANPATH=$HOME/software/ridl/share/man:$MANPATH
 else
-  echo "rIDL not installed in $HOME/projects/ridl/install"
+  echo "rIDL not installed in $HOME/software/ridl"
 fi
 
 # setup easy_install build architecture
