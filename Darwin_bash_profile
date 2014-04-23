@@ -2,7 +2,7 @@
 if [ -a $HOME/.ssh/id_dsa ]; then
   if [ -d /Volumes/keys ]; then
     DESKTOP=`uname -n`
-    /usr/local/bin/keychain --quiet ~/.ssh/id_dsa
+    /usr/local/bin/keychain --quiet --agents ssh ~/.ssh/id_dsa
     source $HOME/.keychain/$DESKTOP-sh
   fi
 else
