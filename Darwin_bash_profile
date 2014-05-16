@@ -62,7 +62,7 @@ else
 fi
 
 # setup TaskDL
-export TASKDL2_DIR=$HOME/projects/taskdl-install
+export TASKDL2_DIR=$HOME/software/taskdl-par
 if [ -d $TASKDL2_DIR ]; then
   export PATH=$TASKDL2_DIR/bin:$PATH
 else
