@@ -36,7 +36,18 @@ if [ -d $HOME/.gem/ruby/1.8/bin ]; then
 fi
 
 # setup IDL license
-export LM_LICENSE_FILE=1700@zrv.txcorp.com
+case $HOSTNAME in
+    dynamo*)
+      echo "Dynamic IP: using local IDL license"
+      ;;
+    galois*)
+      echo "Hostname $HOSTNAME: using local IDL license"
+      ;;
+    *)
+      export LM_LICENSE_FILE=1700@zrv.txcorp.com
+      ;;
+esac
+
 
 # add TeX tools to path
 if [ -d /usr/local/texlive/2013/bin/x86_64-darwin ]; then
@@ -104,18 +115,3 @@ fi
 
 # added by Anaconda 1.8.0 installer
 export PATH=~/anaconda/bin:$PATH
-
-# for GeoDjango KyngChaos packages
-if [ -d /Library/Frameworks/UnixImageIO.framework ]; then
-  export PATH=/Library/Frameworks/UnixImageIO.framework/Programs:$PATH
-  export PATH=/Library/Frameworks/PROJ.framework/Programs:$PATH
-  export PATH=/Library/Frameworks/GEOS.framework/Programs:$PATH
-  export PATH=/Library/Frameworks/SQLite3.framework/Programs:$PATH
-  export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
-  export PATH=/usr/local/pgsql/bin:$PATH
-fi
-
-# Spatialite Tools
-if [ -d /Users/mgalloy/software/spatialite-tools/tools ]; then
-  export PATH=/Users/mgalloy/software/spatialite-tools/tools:$PATH
-fi
