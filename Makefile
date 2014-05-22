@@ -18,3 +18,4 @@ install:
 	cp subversion_config ~/.subversion/config
 	mkdir -p ~/.ssh
 	cp ssh_config ~/.ssh/config
+	./git_setup.sh
