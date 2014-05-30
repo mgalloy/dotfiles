@@ -1,0 +1,29 @@
+.rendered_html ol {
+  list-style:decimal;
+  margin: 1em 2em;
+}
+
+div.text_cell_render {
+  font-family: "Charis SIL", serif;
+  font-size: 16pt;
+  line-height: 145%;
+  width: 105ex;
+}
+
+div.text_cell_render h1 {
+  font-size: 20pt;
+}
+
+div.text_cell_render h2 {
+  font-size: 18pt;
+}
+
+div.input_area {
+  font-family: Consolas, monospace;
+  font-size: 14pt;
+}
+
+div.output_area {
+  font-family: Consolas, monospace;
+  font-size: 14pt;
+}
