@@ -12,6 +12,9 @@ Host sandybridge enrico edison qalion *.txcorp.com
 Host svn.code.sf.net
   User michaelgalloy
 
+Host michaelgalloy.com
+  User michgal2
+  
 Host fieldwingservices.com
   User fieldwin
 
