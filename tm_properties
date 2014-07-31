@@ -6,7 +6,7 @@ wrapColumn      = 80
 showWrapColumn  = true
 
 showInvisibles  = true
-invisiblesMap   = "~ \t|"
+invisiblesMap   = "~ \t⇥"
 
 # variables
 TM_FULLNAME     = "Michael D. Galloy"
