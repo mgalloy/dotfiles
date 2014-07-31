@@ -9,6 +9,9 @@ install:
 	cp inputrc ~/.inputrc
 	cp signature ~/.signature
 	
+	# setup TextMate
+	cp tm_properties ~/.tm_properties
+	
 	# setup docutils
 	cp default.css ~/.default.css
 	cp docutils ~/.docutils

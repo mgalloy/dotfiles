@@ -6,6 +6,7 @@ wrapColumn      = 80
 showWrapColumn  = true
 
 showInvisibles  = true
+invisiblesMap   = "~ \t|"
 
 # variables
 TM_FULLNAME     = "Michael D. Galloy"
@@ -17,11 +18,12 @@ TM_HG           = "/usr/local/bin/hg"
 softWrap        = true
 spellChecking   = true
 
-[ *.{txt,md,mdown,markdown,rst} ]
+[ *.{txt,md,mdown,markdown,rst,tex} ]
 softWrap        = true
 
 [ "{README,INSTALL,LICENSE,TODO,COPYING}" ]
 fileType        = "text.plain"
+softWrap        = true
 
 [ source ]
 spellChecking   = false
