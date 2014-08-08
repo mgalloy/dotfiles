@@ -29,7 +29,7 @@ install:
 	cp ssh_config ~/.ssh/config
 	
 	# setup git
-	./git_setup.sh
+	. ./git_setup.sh
 	cp git-completion.bash ~/.git-completion.bash
 	cp gitconfig ~/.gitconfig
 	cp gitignore_global ~/.gitignore_global
