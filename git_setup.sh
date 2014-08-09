@@ -11,7 +11,7 @@ git config --global difftool.sourcetree.cmd "opendiff \"\$LOCAL\" \"\$REMOTE\""
 git config --global mergetool.sourcetree.cmd "/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"\$LOCAL\" \"\$REMOTE\" -ancestor \"\$BASE\" -merge \"\$MERGED\""
 git config --global mergetool.sourcetree.trustExitCode true
 
-git config --global ui.color true
+git config --global color.ui true
 
 git config --global push.default matching
 
