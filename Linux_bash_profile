@@ -82,9 +82,14 @@ else
 fi
 
 # setup mpiDL
-export MPIDL_DIR=$HOME/projects/mpidl/install
+export MPIDL_DIR=$HOME/software/mpidl-par
 if [ -d $MPIDL_DIR ]; then
   export PATH=$PATH:$MPIDL_DIR/bin
+  if [ `hostname` == "sandybridge.txcorp.com" ]; then
+    export OPAL_PREFIX=/contrib/openmpi-1.8.2-nodl
+    export LD_LIBRARY_PATH=$OPAL_PREFIX/lib:$LD_LIBRARY_PATH
+    export PATH=$OPAL_PREFIX/bin:$PATH
+  fi
 else
   if [ "x$SSH_TTY" != "x" ]; then
     echo "mpiDL not present in $MPIDL_DIR"
