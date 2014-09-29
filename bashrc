@@ -7,4 +7,4 @@ if [ `hostname` == "sandybridge.txcorp.com" ]; then
   export OPAL_PREFIX=/contrib/openmpi-1.8.2-nodl
   export LD_LIBRARY_PATH=$OPAL_PREFIX/lib:$LD_LIBRARY_PATH
   export PATH=$OPAL_PREFIX/bin:$PATH
-endif
+fi
