@@ -8,6 +8,7 @@ install:
 	cp foprc ~/.foprc
 	cp inputrc ~/.inputrc
 	cp signature ~/.signature
+	cp nethackrc ~/.nethackrc
 	
 	# setup TextMate
 	cp tm_properties ~/.tm_properties
