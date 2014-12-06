@@ -1,5 +1,5 @@
 OPTIONS=race:human,gender:male,role:wizard,align:neutral,catname:Demetrius
 OPTIONS=autodig,!autopickup
 OPTIONS=norest_on_space,number_pad
-
+OPTIONS=time
 
