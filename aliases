@@ -6,6 +6,7 @@ if [ `uname` == 'Linux ' ]; then
   alias ls="ls --color=auto"
 fi
 alias ll="ls -lhF"
+alias echopath='echo $PATH | tr : "\n"'
 alias irc="ssh mgalloy@nucleus.txcorp.com -NL 1234:irc.freenode.net:6667"
 alias hl="highlight -I --font Monaco --style mgalloy"
 alias hlidl="highlight --syntax=pro -I --font Monaco --style mgalloy"
