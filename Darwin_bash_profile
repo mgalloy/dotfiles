@@ -51,8 +51,9 @@ esac
 
 
 # add TeX tools to path
-if [ -d /usr/local/texlive/2013/bin/x86_64-darwin ]; then
-  export PATH=/usr/local/texlive/2013/bin/x86_64-darwin:$PATH
+TEXLIVE_DIR=/usr/local/texlive/2014/bin/x86_64-darwin
+if [ -d $TEXLIVE_BINDIR ]; then
+  export PATH=$TEXLIVE_BINDIR:$PATH
 else
   echo "TeX Live not present"
 fi
