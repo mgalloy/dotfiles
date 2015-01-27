@@ -1,4 +1,4 @@
-.PHONY: install
+.PHONY: install templates
 
 install:
 	# setup various resource files
@@ -42,3 +42,6 @@ install:
 	cp ipython_nbconvert_config.py ~/.ipython/profile_default
 	cp ipython_notebook_config.py ~/.ipython/profile_default
 	cp ipython_qtconsole_config.py ~/.ipython/profile_default
+
+templates:
+	@test -s ~/.gvoice || { cp gvoice ~/.gvoice; echo "Make sure to add Google Voice password in ~/.gvoice"; }
