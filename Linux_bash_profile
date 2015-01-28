@@ -9,58 +9,20 @@ export EDITOR="emacs -nw"
 
 export PATH=.:$HOME/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
-
-# do machine specific initialization
-case `uname -n` in
-  edison.txcorp.com)
-    echo "Executing edison specific initialization..."
-
-    export PATH=$HOME/lib/emacs-22.3/bin:$PATH
-    export PYTHONPATH=$HOME/lib/python2.6/site-packages:~/lib64/python2.6/site-packages
-    export CUDA_DIR=/usr/local/cuda
-    ;;
-
-  mg1.txcorp.com|mg2.txcorp.com)
-    echo "Executing mg1/mg2 specific initialization..."
-    
-    export PYTHONPATH=$HOME/lib/python2.4/site-packages:~/lib64/python2.4/site-packages
-    export CUDA_DIR=/usr/local/cuda/4.0/cuda
-
-    # setup appliedem_kernel
-    export LD_LIBRARY_PATH=/usr/mpi/gcc/mvapich-1.2.0/lib/shared:$LD_LIBRARY_PATH
-    export LD_LIBRARY_PATH=/scr_3/gcc/gcc-4.4.6/lib64/:$LD_LIBRARY_PATH  
-    export PATH=/scr_3/gcc/gcc-4.4.6/bin:$PATH
-    export PATH=/usr/mpi/gcc/mvapich-1.2.0/bin:$PATH
-    ;;
-
-  volt.txcorp.com)
-    ;;
-
-  sandybridge.txcorp.com)
-    export PATH=$HOME/software/anaconda/bin:$PATH
-    ;;
-
-  *)
-    echo "Logging into `uname -n`; no specific machine initialization present."
-
-    export CUDA_DIR=/usr/local/cuda
-    ;;
-esac
+export CUDA_DIR=/usr/local/cuda
 
 # for bilder
 export MAIL_ADDRESS=mgalloy@txcorp.com
 
 # setup IDL license
-export LM_LICENSE_FILE=1700@ZRV.TXCORP.COM
+export LM_LICENSE_FILE=1700@zrv.txcorp.com
 
 # setup CUDA
-if [ -n $CUDA_DIR ]; then
-  if [ -d $CUDA_DIR ]; then
-    export LD_LIBRARY_PATH=$CUDA_DIR/lib64:$LD_LIBRARY_PATH
-    export PATH=$CUDA_DIR/bin:$PATH
-  else
-    echo "CUDA not present in $CUDA_DIR"
-  fi
+if [ -d $CUDA_DIR ]; then
+  export LD_LIBRARY_PATH=$CUDA_DIR/lib64:$LD_LIBRARY_PATH
+  export PATH=$CUDA_DIR/bin:$PATH
+else
+  echo "CUDA not present in $CUDA_DIR"
 fi
 
 # setup mglib
@@ -85,11 +47,6 @@ fi
 export MPIDL_DIR=$HOME/software/mpidl-par
 if [ -d $MPIDL_DIR ]; then
   export PATH=$PATH:$MPIDL_DIR/bin
-  if [ `hostname` == "sandybridge.txcorp.com" ]; then
-    export OPAL_PREFIX=/contrib/openmpi-1.8.2-nodl
-    export LD_LIBRARY_PATH=$OPAL_PREFIX/lib:$LD_LIBRARY_PATH
-    export PATH=$OPAL_PREFIX/bin:$PATH
-  fi
 else
   if [ "x$SSH_TTY" != "x" ]; then
     echo "mpiDL not present in $MPIDL_DIR"

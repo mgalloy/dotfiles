@@ -15,9 +15,6 @@ Host svn.code.sf.net
 Host michaelgalloy.com
   User michgal2
   
-Host fieldwingservices.com
-  User fieldwin
-
 Host github.com
   ForwardX11 no
   ForwardX11Trusted no
