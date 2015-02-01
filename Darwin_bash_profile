@@ -120,6 +120,7 @@ ANACONDA_DIR=$HOME/anaconda
 if [ -d $ANACONDA_DIR/bin ]; then
   export PATH=/bin:$PATH
   if [ -a $ANACONDA_DIR/bin/virtualenvwrapper.sh ]; then
+    export VIRTUALENVWRAPPER_PYTHON=$ANACONDA_DIR/bin/python
     source $ANACONDA_DIR/bin/virtualenvwrapper.sh
   fi
 fi
