@@ -115,5 +115,6 @@ else
   echo "git completion not present"
 fi
 
-# added by Anaconda 1.8.0 installer
-export PATH=~/anaconda/bin:$PATH
+# setup Python
+export PATH=$HOME/anaconda/bin:$PATH
+source $HOME/anaconda/bin/virtualenvwrapper.sh
