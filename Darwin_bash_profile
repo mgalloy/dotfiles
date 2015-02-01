@@ -116,5 +116,10 @@ else
 fi
 
 # setup Python
-export PATH=$HOME/anaconda/bin:$PATH
-source $HOME/anaconda/bin/virtualenvwrapper.sh
+ANACONDA_DIR=$HOME/anaconda
+if [ -d $ANACONDA_DIR/bin ]; then
+  export PATH=/bin:$PATH
+  if [ -a $ANACONDA_DIR/bin/virtualenvwrapper.sh ]; then
+    source $ANACONDA_DIR/bin/virtualenvwrapper.sh
+  fi
+fi
