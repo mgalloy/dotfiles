@@ -12,10 +12,10 @@ export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
 export CUDA_DIR=/usr/local/cuda
 
 # for bilder
-export MAIL_ADDRESS=mgalloy@txcorp.com
+#export MAIL_ADDRESS=mgalloy@txcorp.com
 
 # setup IDL license
-export LM_LICENSE_FILE=1700@zrv.txcorp.com
+#export LM_LICENSE_FILE=1700@zrv.txcorp.com
 
 # setup CUDA
 if [ -d $CUDA_DIR ]; then
