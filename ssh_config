@@ -5,10 +5,6 @@ Host idldev.com
   ForwardX11 yes
   ForwardX11Trusted yes
 
-Host sandybridge enrico edison qalion *.txcorp.com
-  ForwardX11 yes
-  ForwardX11Trusted yes
-
 Host svn.code.sf.net
   User michaelgalloy
 
