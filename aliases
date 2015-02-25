@@ -7,15 +7,11 @@ if [ `uname` == 'Linux ' ]; then
 fi
 alias ll="ls -lhF"
 alias echopath='echo $PATH | tr : "\n"'
-alias irc="ssh mgalloy@nucleus.txcorp.com -NL 1234:irc.freenode.net:6667"
+
 alias hl="highlight -I --font Monaco --style mgalloy"
 alias hlidl="highlight --syntax=pro -I --font Monaco --style mgalloy"
 alias top="top -o cpu -stats pid,command,user,cpu,time,threads,csw,rsize,vsize,pageins"
 alias pylons_activate="source ~/software/pylons_env/bin/activate"
-
-if [ `uname` == 'Linux' ]; then
-  alias rmate="rmate --host=auto"
-fi
 
 # quit an OS X application from the command line
 quit () {

@@ -22,7 +22,9 @@ if [ -d $CUDA_DIR ]; then
   export LD_LIBRARY_PATH=$CUDA_DIR/lib64:$LD_LIBRARY_PATH
   export PATH=$CUDA_DIR/bin:$PATH
 else
-  echo "CUDA not present in $CUDA_DIR"
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "CUDA not present in $CUDA_DIR"
+  fi
 fi
 
 # setup mglib
@@ -30,7 +32,9 @@ export MGLIB_DIR=$HOME/software/mglib
 if [ -d $MGLIB_DIR ]; then
   export PATH=$MGLIB_DIR/bin:$PATH
 else
-  echo "mglib is not present in $MGLIB_DIR"
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "mglib is not present in $MGLIB_DIR"
+  fi
 fi
 
 # setup TaskDL
@@ -66,7 +70,9 @@ fi
 if [ -d /usr/local/pgiCDK-11.5/linux86-64/11.5/bin ]; then
   export PATH=/usr/local/pgiCDK-11.5/linux86-64/11.5/bin:$PATH
 else
-  echo "PGI compiler not present"
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "PGI compiler not present"
+  fi
 fi
 
 # setup PETSc
@@ -76,7 +82,9 @@ export PETSC_DIR=/home/research/mgalloy/software/petsc-dev
 if [ -a $HOME/.aliases ]; then
   source $HOME/.aliases
 else
-  echo "Aliases not present in $HOME/.aliases"
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "Aliases not present in $HOME/.aliases"
+  fi
 fi
 
 if [ -a $HOME/.git-completion.bash ]; then
