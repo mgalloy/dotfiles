@@ -39,6 +39,7 @@ fi
 case $HOSTNAME in
     kettricken*)
       export LM_LICENSE_FILE=1700@zrv.txcorp.com
+      ;;
     thyme*)
       echo "Hostname $HOSTNAME: using local IDL license"
       ;;
