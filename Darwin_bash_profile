@@ -16,6 +16,7 @@ if [ $from ]; then
 else
   export PS1="\[\e]1;\h:\W\a\e]2;\h:\w\a\e[34;1m\]\W\$\[\e[0m\] "
 fi
+
 export CLICOLOR=1
 shopt -s histappend
 shopt -s checkwinsize
@@ -23,14 +24,12 @@ export PROMPT_COMMAND='history -a'
 export LANG=en_US.UTF-8
 
 # for bilder
-export MAIL_ADDRESS=mgalloy@txcorp.com
+#export MAIL_ADDRESS=mgalloy@txcorp.com
 
 export EDITOR="emacs -nw"
-export PATH=.:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/games:$PATH
 
-if [ -d /usr/local/lib/python2.7 ]; then
-  export PYTHONPATH=/usr/local/lib/python2.7/site-packages
-fi
+export PATH=.:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/games:$PATH
+export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
 
 if [ -d $HOME/.gem/ruby/1.8/bin ]; then
   export PATH=$HOME/.gem/ruby/1.8/bin:$PATH
@@ -38,17 +37,15 @@ fi
 
 # setup IDL license
 case $HOSTNAME in
-    dynamo*)
-      echo "Dynamic IP: using local IDL license"
-      ;;
-    galois*)
+    kettricken*)
+      export LM_LICENSE_FILE=1700@zrv.txcorp.com
+    thyme*)
       echo "Hostname $HOSTNAME: using local IDL license"
       ;;
     *)
       export LM_LICENSE_FILE=1700@zrv.txcorp.com
       ;;
 esac
-
 
 # add TeX tools to path
 TEXLIVE_DIR=/usr/local/texlive/2014/bin/x86_64-darwin
@@ -58,12 +55,34 @@ else
   echo "TeX Live not present"
 fi
 
+# setup TaskDL
+export TASKDL2_DIR=$HOME/projects/taskdl-2.4/install
+if [ -d $TASKDL2_DIR ]; then
+  export PATH=$TASKDL2_DIR/bin:$PATH
+else
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "TaskDL not present in $TASKDL2_DIR"
+  fi
+fi
+
+# setup mpiDL
+export MPIDL_DIR=$HOME/software/mpidl-par
+if [ -d $MPIDL_DIR ]; then
+  export PATH=$PATH:$MPIDL_DIR/bin
+else
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "mpiDL not present in $MPIDL_DIR"
+  fi
+fi
+
 # setup mglib
 export MGLIB_DIR=$HOME/software/mglib
 if [ -d $MGLIB_DIR ]; then
   export PATH=$MGLIB_DIR/bin:$PATH
 else
-  echo "mglib is not present in $MGLIB_DIR"
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "mglib is not present in $MGLIB_DIR"
+  fi
 fi
 
 # setup CUDA
