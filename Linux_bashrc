@@ -98,3 +98,8 @@ if [ -d $ANACONDA_DIR/bin ]; then
     source $ANACONDA_DIR/bin/virtualenvwrapper.sh
   fi
 fi
+
+# setup Dropbox
+if $HOME/bin/dropbox.py running; then
+  $HOME/bin/dropbox.py start
+fi
