@@ -68,6 +68,11 @@ else
   fi
 fi
 
+# setup SolarSoft
+export SSW=/hao/contrib/ssw
+export SSWDB=/hao/solar1/sswdb
+export SSW_INSTR="eit lasco cds sumer mdi uvcs eis sot xrt sxig12 sxig13 trace hessi spartan soon nso mees lapalma vso ontology secchi ssc plastic impact sxt ontology aia hmi eve bcs hxt wbs binaries chianti pfss hydro ana ztools cmes cactus cp poa"
+
 if [ -a $HOME/.aliases ]; then
   source $HOME/.aliases
 else
@@ -81,5 +86,15 @@ if [ -a $HOME/.git-completion.bash ]; then
 else
   if [ "x$SSH_TTY" != "x" ]; then
     echo "git completion not present"
+  fi
+fi
+
+# setup Python
+ANACONDA_DIR=$HOME/anaconda
+if [ -d $ANACONDA_DIR/bin ]; then
+  export PATH=$ANACONDA_DIR/bin:$PATH
+  if [ -a $ANACONDA_DIR/bin/virtualenvwrapper.sh ]; then
+    export VIRTUALENVWRAPPER_PYTHON=$ANACONDA_DIR/bin/python
+    source $ANACONDA_DIR/bin/virtualenvwrapper.sh
   fi
 fi
