@@ -26,7 +26,7 @@ $if Bash
 $endif
 
 # Add rIDL-specific readline abbreviations.
-$include /Users/mgalloy/projects/ridl/install/share/inputrc
+$include /Users/mgalloy/software/ridl/share/inputrc
 
 # Include system wide settings which are ignored by default if one has their
 # own .inputrc.
