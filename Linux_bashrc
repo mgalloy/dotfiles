@@ -107,9 +107,10 @@ if [ -d $HEASOFT ]; then
 fi
 
 # setup Dropbox
-if [ -x $HOME/.dropbox-dist/dropboxd ]; then
-  if $HOME/bin/dropbox.py running; then
-    $HOME/bin/dropbox.py start
+if [ `hostname` == "pike" ]; then
+  if [ -x $HOME/.dropbox-dist/dropboxd ]; then
+    if $HOME/bin/dropbox.py running; then
+      $HOME/bin/dropbox.py start
+    fi
   fi
 fi
-
