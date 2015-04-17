@@ -37,8 +37,8 @@ install:
 
 	# setup IPython custom
 	mkdir -p ~/.ipython/profile_default/static/custom
-	cp ipython_custom.css ~/.ipython/profile_default/static/custom/custom.css
-
+	#cp ipython_custom.css ~/.ipython/profile_default/static/custom/custom.css
+	rm -f ~/.ipython/profile_default/static/custom/custom.css
 	cp ipython_config.py ~/.ipython/profile_default
 	cp ipython_nbconvert_config.py ~/.ipython/profile_default
 	cp ipython_notebook_config.py ~/.ipython/profile_default
