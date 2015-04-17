@@ -90,6 +90,7 @@ else
 fi
 
 # setup Python
+export PYTHONSTARTUP=$HOME/.pythonrc
 ANACONDA_DIR=$HOME/anaconda
 if [ -d $ANACONDA_DIR/bin ]; then
   export PATH=$ANACONDA_DIR/bin:$PATH

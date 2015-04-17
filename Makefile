@@ -9,6 +9,7 @@ install:
 	cp inputrc ~/.inputrc
 	cp signature ~/.signature
 	cp nethackrc ~/.nethackrc
+	cp pythonrc ~/.pythonrc
 
 	# setup TextMate
 	cp tm_properties ~/.tm_properties
