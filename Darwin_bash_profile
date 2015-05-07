@@ -135,6 +135,7 @@ fi
 # setup heasoft (ftools, etc.)
 HEASOFT_DIR=$HOME/software/heasoft-install/x86_64-apple-darwin14.1.0
 if [ -d $HEASOFT ]; then
+  export FTOOLS=$HEASOFT_DIR
   export PATH=$HEASOFT_DIR/bin:$PATH
   export DYLD_LIBRARY_PATH=$HEASOFT_DIR/lib
 fi
