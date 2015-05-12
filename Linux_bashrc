@@ -39,6 +39,16 @@ else
   fi
 fi
 
+# setup mgunit
+export MGUNIT_DIR=$HOME/software/mgunit
+if [ -d $MGUNIT_DIR ]; then
+  export PATH=$MGUNIT_DIR/bin:$PATH
+else
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "mgunit is not present in $MGUNIT_DIR"
+  fi
+fi
+
 # setup TaskDL
 export TASKDL2_DIR=$HOME/projects/taskdl-2.4/install
 if [ -d $TASKDL2_DIR ]; then

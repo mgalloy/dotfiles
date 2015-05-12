@@ -86,6 +86,16 @@ else
   fi
 fi
 
+# setup mgunit
+export MGUNIT_DIR=$HOME/software/mgunit
+if [ -d $MGUNIT_DIR ]; then
+  export PATH=$MGUNIT_DIR/bin:$PATH
+else
+  if [ "x$SSH_TTY" != "x" ]; then
+    echo "mgunit is not present in $MGUNIT_DIR"
+  fi
+fi
+
 # setup CUDA
 if /usr/sbin/ioreg -l | grep -i nvidia > /dev/null; then
   if [ -d /usr/local/cuda ]; then
