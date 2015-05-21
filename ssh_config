@@ -10,7 +10,12 @@ Host svn.code.sf.net
 
 Host michaelgalloy.com
   User michgal2
-  
+
 Host github.com
   ForwardX11 no
   ForwardX11Trusted no
+
+Host pike
+  HostName pike.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
