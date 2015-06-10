@@ -14,3 +14,7 @@ Host michaelgalloy.com
 Host github.com
   ForwardX11 no
   ForwardX11Trusted no
+
+Host pike.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
