@@ -149,3 +149,14 @@ if [ -d $HEASOFT ]; then
   export PATH=$HEASOFT_DIR/bin:$PATH
   export DYLD_LIBRARY_PATH=$HEASOFT_DIR/lib
 fi
+
+# use brew install bash completion files
+BASH_COMPLETION_DIR=/usr/local/etc/bash_completion.d
+if [ -d $BASH_COMPLETION_DIR ]; then
+  FILES=( $(ls $BASH_COMPLETION_DIR) )
+  for f in ${FILES[@]}; do
+    source $BASH_COMPLETION_DIR/$f
+  done
+fi
+
+  
