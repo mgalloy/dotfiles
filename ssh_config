@@ -10,11 +10,30 @@ Host svn.code.sf.net
 
 Host michaelgalloy.com
   User michgal2
-  
+
 Host github.com
   ForwardX11 no
   ForwardX11Trusted no
 
-Host pike.hao.ucar.edu
+Host pike
+  HostName pike.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host mlsoserver
+  HostName mlsoserver.mlso.ucar.edu
+
+Host kaula
+  HostName kaula.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host compdata
+  HostName compdata.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host mlsodata
+  HostName mlsodata.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
