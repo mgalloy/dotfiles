@@ -28,7 +28,7 @@ export LANG=en_US.UTF-8
 
 export EDITOR="emacs -nw"
 
-export PATH=.:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/games:$PATH
+export PATH=.:$HOME/bin:$HOME/software/bin:/usr/local/bin:/usr/local/sbin:/usr/games:$PATH
 export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
 
 if [ -d $HOME/.gem/ruby/1.8/bin ]; then
