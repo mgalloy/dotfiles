@@ -17,14 +17,8 @@ export CUDA_DIR=/usr/local/cuda
 #export MAIL_ADDRESS=mgalloy@txcorp.com
 
 # setup IDL
-case $HOSTNAME in
-  pike*)
-    export IDL_DIR=$HOME/software/exelis/idl
-    ;;
-  *)
-    export LM_LICENSE_FILE=1700@zrv.txcorp.com
-    ;;
-esac
+export IDL_DIR=$HOME/software/exelis/idl
+export LM_LICENSE_FILE=1700@zrv.txcorp.com
 
 # setup CUDA
 if [ -d $CUDA_DIR ]; then
