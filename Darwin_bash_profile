@@ -140,6 +140,11 @@ if [ -d $ANACONDA_DIR/bin ]; then
     export VIRTUALENVWRAPPER_PYTHON=$ANACONDA_DIR/bin/python
     source $ANACONDA_DIR/bin/virtualenvwrapper.sh
   fi
+
+  # setup IDL-Python bridge
+  IDL_HOME=/Applications/exelis/idl
+  export PYTHONPATH=$IDL_HOME/bin/bin.darwin.x86_64:$IDL_HOME/lib/bridges
+  export DYLD_LIBRARY_PATH=$IDL_HOME/bin/bin.darwin.x86_64:/System/Library/Frameworks/ImageIO.framework/Resources:/usr/lib:$ANACONDA_DIR/lib:$DYLD_LIBRARY_PATH
 fi
 
 # setup heasoft (ftools, etc.)
@@ -147,7 +152,7 @@ HEASOFT_DIR=$HOME/software/heasoft-install/x86_64-apple-darwin14.1.0
 if [ -d $HEASOFT ]; then
   export FTOOLS=$HEASOFT_DIR
   export PATH=$HEASOFT_DIR/bin:$PATH
-  export DYLD_LIBRARY_PATH=$HEASOFT_DIR/lib
+  export DYLD_LIBRARY_PATH=$HEASOFT_DIR/lib:$DYLD_LIBRARY_PATH
 fi
 
 # use brew install bash completion files
