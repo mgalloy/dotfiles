@@ -17,7 +17,6 @@ export CUDA_DIR=/usr/local/cuda
 #export MAIL_ADDRESS=mgalloy@txcorp.com
 
 # setup IDL
-export IDL_DIR=$HOME/software/exelis/idl
 export LM_LICENSE_FILE=1700@zrv.txcorp.com
 
 # setup CUDA
@@ -99,6 +98,11 @@ else
     echo "git completion not present"
   fi
 fi
+
+# setup HPSS tools (unfortunately, /opt/local is lazily mounted, so
+# can't test to see if it's there before adding it to the PATH
+HPSS_DIR=/opt/local/hpss-new/hpss
+PATH=$PATH:$HPSS_DIR/bin
 
 # setup Python
 export PYTHONSTARTUP=$HOME/.pythonrc
