@@ -144,7 +144,7 @@ if [ -d $ANACONDA_DIR/bin ]; then
   # setup IDL-Python bridge
   IDL_HOME=/Applications/exelis/idl
   export PYTHONPATH=$IDL_HOME/bin/bin.darwin.x86_64:$IDL_HOME/lib/bridges
-  export DYLD_LIBRARY_PATH=$IDL_HOME/bin/bin.darwin.x86_64:/System/Library/Frameworks/ImageIO.framework/Resources:/usr/lib:$ANACONDA_DIR/lib:$DYLD_LIBRARY_PATH
+  alias idlnotebook="DYLD_LIBRARY_PATH=$IDL_HOME/bin/bin.darwin.x86_64:/System/Library/Frameworks/ImageIO.framework/Resources:/usr/lib:$ANACONDA_DIR/lib:$DYLD_LIBRARY_PATH ipython notebook"
 fi
 
 # setup heasoft (ftools, etc.)
