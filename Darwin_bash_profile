@@ -152,8 +152,6 @@ HEASOFT_DIR=$HOME/software/heasoft-install/x86_64-apple-darwin14.1.0
 if [ -d $HEASOFT ]; then
   export FTOOLS=$HEASOFT_DIR
   export PATH=$HEASOFT_DIR/bin:$PATH
-  # this doesn't seem to be necessary
-  #export DYLD_LIBRARY_PATH=$HEASOFT_DIR/lib:$DYLD_LIBRARY_PATH
 fi
 
 # use brew install bash completion files
