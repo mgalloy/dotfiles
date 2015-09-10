@@ -16,8 +16,29 @@ export CUDA_DIR=/usr/local/cuda
 # for bilder
 #export MAIL_ADDRESS=mgalloy@txcorp.com
 
+REDHAT_RELEASE=/etc/redhat-release
+if [ -f "$REDHAT_RELEASE" ]; then
+  export REDHAT_MAJOR_VERSION=$(cat /etc/redhat-release | cut -d" " -f3 | cut -d"." -f1)
+else
+  export REDHAT_MAJOR_VERSION=
+fi
+
+if [ "$REDHAT_MAJOR_VERSION" ]; then
+  case $REDHAT_MAJOR_VERSION in
+    5)
+      HPSS_DIR=/opt/local/HPSS/linux86-64/hpss/bin
+      ;;
+    6)
+      HPSS_DIR=/opt/local/hpss-new/hpss/bin
+      ;;
+    *)
+  esac
+
+  export PATH=$HPSS_DIR:$PATH
+fi
+
 # setup IDL
-export LM_LICENSE_FILE=1700@zrv.txcorp.com
+#export LM_LICENSE_FILE=1700@zrv.txcorp.com
 
 # setup CUDA
 if [ -d $CUDA_DIR ]; then
@@ -98,11 +119,6 @@ else
     echo "git completion not present"
   fi
 fi
-
-# setup HPSS tools (unfortunately, /opt/local is lazily mounted, so
-# can't test to see if it's there before adding it to the PATH
-HPSS_DIR=/opt/local/hpss-new/hpss
-PATH=$PATH:$HPSS_DIR/bin
 
 # setup Python
 export PYTHONSTARTUP=$HOME/.pythonrc
