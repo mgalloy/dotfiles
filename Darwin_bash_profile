@@ -155,12 +155,6 @@ if [ -d $HEASOFT ]; then
 fi
 
 # use brew install bash completion files
-BASH_COMPLETION_DIR=/usr/local/etc/bash_completion.d
-if [ -d $BASH_COMPLETION_DIR ]; then
-  FILES=( $(ls $BASH_COMPLETION_DIR) )
-  for f in ${FILES[@]}; do
-    source $BASH_COMPLETION_DIR/$f
-  done
+if [ -f /usr/local/etc/bash_completion ]; then
+  . /usr/local/etc/bash_completion
 fi
-
-  
