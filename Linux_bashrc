@@ -40,6 +40,11 @@ fi
 # setup IDL
 #export LM_LICENSE_FILE=1700@zrv.txcorp.com
 
+# local software
+if [ -d $HOME/software/bin ]; then
+  export PATH=$HOME/software/bin:$PATH
+fi
+
 # setup CUDA
 if [ -d $CUDA_DIR ]; then
   export LD_LIBRARY_PATH=$CUDA_DIR/lib64:$LD_LIBRARY_PATH
