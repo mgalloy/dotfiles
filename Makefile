@@ -44,5 +44,9 @@ install:
 	cp ipython_notebook_config.py ~/.ipython/profile_default
 	cp ipython_qtconsole_config.py ~/.ipython/profile_default
 
+	# Anaconda license
+	mkdir -p ~/.continuum
+	cp licenses/license_academic_20150715172552.txt ~/.continuum
+
 templates:
 	@test -s ~/.gvoice || { cp gvoice ~/.gvoice; echo "Make sure to add Google Voice password in ~/.gvoice"; }

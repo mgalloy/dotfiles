@@ -1,0 +1,13 @@
+{
+  "_license_version": "1.1",
+  "company": "National Center for Atmospheric Research",
+  "email": "mgalloy@ucar.edu",
+  "end_date": "2016-07-14",
+  "issued": "2015-07-15",
+  "name": "Michael Galloy",
+  "packages": "numbapro mkl iopro",
+  "product": "Academic",
+  "qty": "1",
+  "sig": "20a478e15d9380166cbd463dbf1ce5f5c4fae4ac7e2d3e5584bcaad2651e4f33379c66aa1503a495950e88df197637d9abe28ac828b6008f1d6afc3e7763df07",
+  "vendor": "continuum"
+}
