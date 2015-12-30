@@ -8,6 +8,7 @@ git config --global core.editor "emacs -nw"
 git config --global core.autocrlf input
 
 git config --global difftool.sourcetree.cmd "opendiff \"\$LOCAL\" \"\$REMOTE\""
+git config --global diff.nb2md.textconv nb2md
 git config --global mergetool.sourcetree.cmd "/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"\$LOCAL\" \"\$REMOTE\" -ancestor \"\$BASE\" -merge \"\$MERGED\""
 git config --global mergetool.sourcetree.trustExitCode true
 

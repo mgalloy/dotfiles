@@ -34,6 +34,7 @@ install:
 	./git_setup.sh
 	cp git-completion.bash ~/.git-completion.bash
 	cp gitignore_global ~/.gitignore_global
+	cp gitattributes ~/.gitattributes
 
 	# setup IPython custom
 	mkdir -p ~/.ipython/profile_default/static/custom
