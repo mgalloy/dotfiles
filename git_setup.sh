@@ -6,6 +6,7 @@ git config --global user.email mgalloy@gmail.com
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.editor "emacs -nw"
 git config --global core.autocrlf input
+git config --global core.attributesfile ~/.gitattributes
 
 git config --global difftool.sourcetree.cmd "opendiff \"\$LOCAL\" \"\$REMOTE\""
 git config --global diff.nb2md.textconv nb2md
