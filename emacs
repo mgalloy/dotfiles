@@ -13,6 +13,7 @@
  '(speedbar-update-flag t t)
  '(tool-bar-button-margin 1 t)
  '(emulate-mac-us-keyboard-mode t)
+ '(fill-column 80)
  '(idlwave-block-indent 2)
  '(idlwave-code-comment ";")
  '(idlwave-begin-line-comment ";;")
