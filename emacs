@@ -22,6 +22,7 @@
  '(idlwave-end-offset -2)
  '(idlwave-expand-generic-end t)
  '(idlwave-hanging-indent nil)
+ '(load-path (cons "~/software/share/emacs/site-lisp" load-path))
  '(imenu-sort-function (quote imenu--sort-by-name))
  '(make-backup-files nil)
  '(transient-mark-mode t)
