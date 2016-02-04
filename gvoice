@@ -1,9 +1,8 @@
-
 [auth]
 # Google Account email address (one associated w/ your Voice account)
 email=mgalloy@gmail.com
 
-# Raw password used or login
+# Raw password used for login
 password=
 
 [gvoice]
