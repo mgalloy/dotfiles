@@ -1,3 +1,6 @@
+# u=rwx,g=rwx,o=rx
+umask 0002
+
 export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
 
 # setup a better command line
