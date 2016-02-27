@@ -10,6 +10,7 @@ install:
 	cp signature ~/.signature
 	cp nethackrc ~/.nethackrc
 	cp pythonrc ~/.pythonrc
+	cp screenrc ~/.screenrc
 
 	# setup TextMate
 	cp tm_properties ~/.tm_properties
