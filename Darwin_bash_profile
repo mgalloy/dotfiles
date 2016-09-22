@@ -24,7 +24,7 @@ export PROMPT_COMMAND='history -a'
 export LANG=en_US.UTF-8
 
 # for bilder
-#export MAIL_ADDRESS=mgalloy@txcorp.com
+#export MAIL_ADDRESS=mgalloy@gmail.com
 
 export EDITOR="emacs -nw"
 
@@ -115,9 +115,9 @@ fi
 # setup easy_install build architecture
 export ARCHFLAGS="-arch x86_64"
 
-if [ -f /usr/local/etc/bash_completion ]; then
-  source /usr/local/etc/bash_completion
-fi
+#if [ -f /usr/local/etc/bash_completion ]; then
+#  source /usr/local/etc/bash_completion
+#fi
 
 if [ -a $HOME/.aliases ]; then
   source $HOME/.aliases
@@ -154,7 +154,3 @@ if [ -d $HEASOFT ]; then
   export PATH=$HEASOFT_DIR/bin:$PATH
 fi
 
-# use brew install bash completion files
-if [ -f /usr/local/etc/bash_completion ]; then
-  . /usr/local/etc/bash_completion
-fi
