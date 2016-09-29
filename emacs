@@ -37,6 +37,8 @@
 (column-number-mode 1)
 (add-hook 'idlwave-mode-hook 'imenu-add-menubar-index)
 
+(set-face-foreground 'font-lock-comment-face "red")
+
 (defconst my-c-style
   '((c-tab-always-indent           . t)
     (c-comment-only-line-offset    . 0)
