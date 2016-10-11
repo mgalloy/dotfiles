@@ -21,4 +21,5 @@ git config --global push.default matching
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.stat status
 
-git config --global commit.gpgsign true
+# gpg 1.4.20 works, but newer versions seem broken
+#git config --global commit.gpgsign true
