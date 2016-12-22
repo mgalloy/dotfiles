@@ -1,10 +1,8 @@
 # setup for keychain
 if [ -a $HOME/.ssh/id_rsa ]; then
-  if [ -d /Volumes/keys ]; then
-    DESKTOP=`uname -n`
-    /usr/local/bin/keychain --quiet --agents ssh ~/.ssh/id_rsa
-    source $HOME/.keychain/$DESKTOP-sh
-  fi
+  DESKTOP=`uname -n`
+  /usr/local/bin/keychain --quiet --agents ssh ~/.ssh/id_rsa
+  source $HOME/.keychain/$DESKTOP-sh
 else
   echo "Keys not present; password-less login not available."
 fi
