@@ -24,19 +24,8 @@ else
   export REDHAT_MAJOR_VERSION=
 fi
 
-if [ "$REDHAT_MAJOR_VERSION" ]; then
-  case $REDHAT_MAJOR_VERSION in
-    5)
-      HPSS_DIR=/opt/local/HPSS/linux86-64/hpss/bin
-      ;;
-    6)
-      HPSS_DIR=/opt/local/hpss-new/hpss/bin
-      ;;
-    *)
-  esac
-
-  export PATH=$HPSS_DIR:$PATH
-fi
+# use new hsi client
+export PATH=/opt/local/hpss/bin:$PATH
 
 # setup IDL
 #export LM_LICENSE_FILE=1700@zrv.txcorp.com
