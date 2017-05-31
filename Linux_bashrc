@@ -27,11 +27,13 @@ fi
 # use new hsi client
 export PATH=/opt/local/hpss/bin:$PATH
 
-# setup KCor pipeline testing
-export PATH=~/software/kcor-pipeline/bin:$PATH
-
 # setup IDL
 #export LM_LICENSE_FILE=1700@zrv.txcorp.com
+
+# contrib software
+if [ -d /opt/local/bin ]; then
+  export PATH=/opt/local/bin:$PATH
+fi
 
 # local software
 if [ -d $HOME/software/bin ]; then
