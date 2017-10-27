@@ -131,7 +131,11 @@ fi
 
 # setup Python
 export PYTHONSTARTUP=$HOME/.pythonrc
-ANACONDA_DIR=$HOME/anaconda
+if [ -d $HOME/anaconda3 ]; then
+  ANACONDA_DIR=$HOME/anaconda3
+else
+  ANACONDA_DIR=$HOME/anaconda
+fi
 if [ -d $ANACONDA_DIR/bin ]; then
   export PATH=$ANACONDA_DIR/bin:$PATH
   if [ -a $ANACONDA_DIR/bin/virtualenvwrapper.sh ]; then
