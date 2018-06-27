@@ -4,7 +4,6 @@ HashKnownHosts yes
 Host idldev.com
   ForwardX11 yes
   ForwardX11Trusted yes
-  XAuthLocation /opt/X11/bin/xauth
 
 Host svn.code.sf.net
   User michaelgalloy
@@ -20,28 +19,28 @@ Host pike
   HostName pike.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
-  XAuthLocation /opt/X11/bin/xauth
 
 Host kodiak
   HostName kodiak.mlso.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
-  XAuthLocation /opt/X11/bin/xauth
 
 Host kaula
   HostName kaula.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
-  XAuthLocation /opt/X11/bin/xauth
+
+Host mahi
+  HostName mahi.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
 
 Host compdata
   HostName compdata.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
-  XAuthLocation /opt/X11/bin/xauth
 
 Host mlsodata
   HostName mlsodata.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
-  XAuthLocation /opt/X11/bin/xauth
