@@ -138,6 +138,9 @@ else
 fi
 if [ -d $ANACONDA_DIR/bin ]; then
   export PATH=$ANACONDA_DIR/bin:$PATH
+  if [ -a  ]; then
+    . $ANACONDA_DIR/etc/profile.d/conda.sh
+  fi
   if [ -a $ANACONDA_DIR/bin/virtualenvwrapper.sh ]; then
     export VIRTUALENVWRAPPER_PYTHON=$ANACONDA_DIR/bin/python
     source $ANACONDA_DIR/bin/virtualenvwrapper.sh
