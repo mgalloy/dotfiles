@@ -138,12 +138,3 @@ if [ -d $HEASOFT ]; then
   export PATH=$HEASOFT_DIR/bin:$PATH
   export LD_LIBRARY_PATH=$HEASOFT_DIR/lib:$LD_LIBRARY_PATH
 fi
-
-# setup Dropbox
-if [ `hostname` == "pike" ]; then
-  if [ -x $HOME/.dropbox-dist/dropboxd ]; then
-    if $HOME/bin/dropbox.py running; then
-      $HOME/bin/dropbox.py start
-    fi
-  fi
-fi
