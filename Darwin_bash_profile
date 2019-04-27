@@ -129,26 +129,6 @@ else
   echo "git completion not present"
 fi
 
-# setup Python
-export PYTHONSTARTUP=$HOME/.pythonrc
-if [ -d $HOME/anaconda3 ]; then
-  ANACONDA_DIR=$HOME/anaconda3
-else
-  ANACONDA_DIR=$HOME/anaconda
-fi
-if [ -d $ANACONDA_DIR/bin ]; then
-  export PATH=$ANACONDA_DIR/bin:$PATH
-  if [ -a $ANACONDA_DIR/bin/virtualenvwrapper.sh ]; then
-    export VIRTUALENVWRAPPER_PYTHON=$ANACONDA_DIR/bin/python
-    source $ANACONDA_DIR/bin/virtualenvwrapper.sh
-  fi
-
-  # setup IDL-Python bridge
-  IDL_HOME=/Applications/exelis/idl
-  export PYTHONPATH=$IDL_HOME/bin/bin.darwin.x86_64:$IDL_HOME/lib/bridges
-  alias idlnotebook="DYLD_LIBRARY_PATH=$IDL_HOME/bin/bin.darwin.x86_64:/System/Library/Frameworks/ImageIO.framework/Resources:/usr/lib:$ANACONDA_DIR/lib:$DYLD_LIBRARY_PATH ipython notebook"
-fi
-
 # setup heasoft (ftools, etc.)
 HEASOFT_DIR=$HOME/software/heasoft-install/x86_64-apple-darwin14.1.0
 if [ -d $HEASOFT ]; then
@@ -157,3 +137,18 @@ if [ -d $HEASOFT ]; then
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/mgalloy/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/mgalloy/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/mgalloy/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/mgalloy/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
