@@ -47,7 +47,7 @@ case $HOSTNAME in
 esac
 
 # add TeX tools to path
-TEXLIVE_BINDIR=/usr/local/texlive/2017/bin/x86_64-darwin
+TEXLIVE_BINDIR=/usr/local/texlive/2018/bin/x86_64-darwin
 if [ -d $TEXLIVE_BINDIR ]; then
   export PATH=$TEXLIVE_BINDIR:$PATH
 else
