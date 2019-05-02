@@ -138,6 +138,11 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+# setup poetry
+if [ -d $HOME/.poetry/bin ]; then
+  export PATH=$HOME/.poetry/bin:$PATH
+fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/mgalloy/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
