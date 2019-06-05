@@ -44,3 +44,18 @@ Host mlsodata
   HostName mlsodata.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
+
+Host sunrise
+  HostName sunrise.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host twilight
+  HostName twilight.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sunset
+  HostName sunset.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
