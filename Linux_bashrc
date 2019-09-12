@@ -35,6 +35,11 @@ if [ -d /opt/local/bin ]; then
   export PATH=/opt/local/bin:$PATH
 fi
 
+# Globus
+if [ -d $HOME/.local/bin ]; then
+  export PATH=$HOME/.local/bin:$PATH
+fi
+
 # local software
 if [ -d $HOME/software/bin ]; then
   export PATH=$HOME/software/bin:$PATH
@@ -137,4 +142,17 @@ HEASOFT_DIR=$HOME/software/heasoft-install/x86_64-unknown-linux-gnu-libc2.12
 if [ -d $HEASOFT ]; then
   export PATH=$HEASOFT_DIR/bin:$PATH
   export LD_LIBRARY_PATH=$HEASOFT_DIR/lib:$LD_LIBRARY_PATH
+fi
+
+# setup poetry
+if [ -d $HOME/.poetry/bin ]; then
+  export PATH=$HOME/.poetry/bin:$PATH
+fi
+
+# setup pyenv
+if [ -d $HOME/.pyenv/bin ]; then
+  export PATH=$HOME/.pyenv/bin:$PATH
+fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
 fi
