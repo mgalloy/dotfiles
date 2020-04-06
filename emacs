@@ -5,6 +5,7 @@
  '(auto-resize-tool-bars t t)
  '(case-fold-search t)
  '(current-language-environment "UTF-8")
+ '(custom-enabled-themes (quote (tango-dark)))
  '(default-input-method "rfc1345")
  '(menu-bar-mode t)
  '(scroll-bar-mode (quote right))
