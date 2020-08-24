@@ -21,33 +21,19 @@ shopt -s checkwinsize
 export PROMPT_COMMAND='history -a'
 export LANG=en_US.UTF-8
 
-# for bilder
-#export MAIL_ADDRESS=mgalloy@gmail.com
-
 export EDITOR="emacs -nw"
 
 export PATH=.:$HOME/bin:$HOME/software/bin:/usr/local/bin:/usr/local/sbin:/usr/games:$PATH
 export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 if [ -d $HOME/.gem/ruby/1.8/bin ]; then
   export PATH=$HOME/.gem/ruby/1.8/bin:$PATH
 fi
 
-# setup IDL license
-case $HOSTNAME in
-    kettricken*)
-      export LM_LICENSE_FILE=1700@zrv.txcorp.com
-      ;;
-    thyme*)
-      echo "Hostname $HOSTNAME: using local IDL license"
-      ;;
-    *)
-      export LM_LICENSE_FILE=1700@zrv.txcorp.com
-      ;;
-esac
-
 # add TeX tools to path
-TEXLIVE_BINDIR=/usr/local/texlive/2019/bin/x86_64-darwin
+TEXLIVE_BINDIR=/usr/local/texlive/2020/bin/x86_64-darwin
 if [ -d $TEXLIVE_BINDIR ]; then
   export PATH=$TEXLIVE_BINDIR:$PATH
 else
