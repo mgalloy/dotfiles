@@ -20,6 +20,11 @@ Host pike
   ForwardX11 yes
   ForwardX11Trusted yes
 
+Host seabass
+  HostName seabass.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
 Host kodiak
   HostName kodiak.mlso.ucar.edu
   ForwardX11 yes
