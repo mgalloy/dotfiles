@@ -30,6 +30,13 @@ export PATH=/opt/local/hpss/bin:$PATH
 # setup IDL
 #export LM_LICENSE_FILE=1700@zrv.txcorp.com
 
+flexdirs=(/tmp/flexera /tmp/flexera-sv)
+for d in ${flexdirs[@]}; do 
+  if [ ! $d ]; then
+    mkdir $d
+  fi
+done
+
 # contrib software
 if [ -d /opt/local/bin ]; then
   export PATH=/opt/local/bin:$PATH
