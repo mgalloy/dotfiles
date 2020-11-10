@@ -10,6 +10,7 @@ Host svn.code.sf.net
 
 Host michaelgalloy.com
   User michgal2
+  Port 2233
 
 Host github.com
   ForwardX11 no
