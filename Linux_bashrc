@@ -37,6 +37,19 @@ for d in ${flexdirs[@]}; do
   fi
 done
 
+# setup iTerm2
+function iterm_notify {
+  printf '\e]9;%s\a' "$@"
+}
+
+function iterm_bounce {
+  printf '\e]1337;RequestAttention=yes\a'
+}
+
+function iterm_badge {
+  printf "\e]1337;SetBadgeFormat=%s\a" $(echo "$@" | base64)
+}
+
 # contrib software
 if [ -d /opt/local/bin ]; then
   export PATH=/opt/local/bin:$PATH

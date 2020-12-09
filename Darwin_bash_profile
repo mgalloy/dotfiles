@@ -32,6 +32,19 @@ if [ -d $HOME/.gem/ruby/1.8/bin ]; then
   export PATH=$HOME/.gem/ruby/1.8/bin:$PATH
 fi
 
+# setup iTerm2
+function iterm_notify {
+  printf '\e]9;%s\a' "$@"
+}
+
+function iterm_bounce {
+  printf '\e]1337;RequestAttention=yes\a'
+}
+
+function iterm_badge {
+  printf "\e]1337;SetBadgeFormat=%s\a" $(echo "$@" | base64)
+}
+
 # add TeX tools to path
 TEXLIVE_BINDIR=/usr/local/texlive/2020/bin/x86_64-darwin
 if [ -d $TEXLIVE_BINDIR ]; then
