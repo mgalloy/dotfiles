@@ -7,6 +7,7 @@ export CLICOLOR=1
 shopt -s histappend
 shopt -s checkwinsize
 export PROMPT_COMMAND='history -a'
+export HISTSIZE=2000
 
 export EDITOR="emacs -nw"
 
