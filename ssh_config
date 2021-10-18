@@ -75,3 +75,18 @@ Host sunset
   HostName sunset.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
+
+Host sundog1
+  HostName sundog1.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sundog2
+  HostName sundog2.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sundog3
+  HostName sundog3.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
