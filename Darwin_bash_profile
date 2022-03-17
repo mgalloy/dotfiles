@@ -25,7 +25,7 @@ export HISTSIZE=2000
 export EDITOR="emacs -nw"
 
 export PATH=.:$HOME/bin:$HOME/software/bin:/usr/local/bin:/usr/local/sbin:/usr/games:$PATH
-export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
+export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64:$HOME/software/lib
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
