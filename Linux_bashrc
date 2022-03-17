@@ -12,7 +12,7 @@ export HISTSIZE=2000
 export EDITOR="emacs -nw"
 
 export PATH=.:$HOME/bin:$HOME/software/bin:$PATH
-export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64:$HOME/software/lib64
+export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64:$HOME/software/lib64:$HOME/software/lib
 export CUDA_DIR=/usr/local/cuda
 
 # for bilder
