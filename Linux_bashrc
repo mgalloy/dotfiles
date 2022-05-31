@@ -125,6 +125,11 @@ else
   fi
 fi
 
+# setup ucomp
+if [ -a $HOME/software/ucomp-pipeline/bin/ucomp-completion.bash ]; then
+  source $HOME/software/ucomp-pipeline/bin/ucomp-completion.bash ]
+fi
+
 # setup SolarSoft
 export SSW=/hao/contrib/ssw
 export SSWDB=/hao/solar1/sswdb
@@ -179,3 +184,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+[ -f ~/.cargo/env ] && source $HOME/.cargo/env
