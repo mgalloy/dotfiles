@@ -88,3 +88,8 @@ Host sundog3
   HostName sundog3.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
+
+Host datertot
+  HostName datertot.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
