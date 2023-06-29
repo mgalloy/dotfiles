@@ -47,7 +47,7 @@ function iterm_badge {
 }
 
 # add TeX tools to path
-TEXLIVE_BINDIR=/usr/local/texlive/2022/bin/universal-darwin
+TEXLIVE_BINDIR=/usr/local/texlive/current/bin/universal-darwin
 if [ -d $TEXLIVE_BINDIR ]; then
   export PATH=$TEXLIVE_BINDIR:$PATH
 else
