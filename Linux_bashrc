@@ -1,4 +1,4 @@
-# u=rwx,g=rwx,o=rx
+u=rwx,g=rwx,o=rx
 umask 0002
 
 # setup a better command line
@@ -168,11 +168,6 @@ HEASOFT_DIR=$HOME/software/heasoft-install/x86_64-unknown-linux-gnu-libc2.12
 if [ -d $HEASOFT ]; then
   export PATH=$HEASOFT_DIR/bin:$PATH
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HEASOFT_DIR/lib
-fi
-
-# setup poetry
-if [ -d $HOME/.poetry/bin ]; then
-  export PATH=$HOME/.poetry/bin:$PATH
 fi
 
 # setup pyenv
