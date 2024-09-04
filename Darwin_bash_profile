@@ -5,9 +5,10 @@ else
 fi
 
 # setup for keychain
-if [ -a $HOME/.ssh/id_rsa ]; then
+SSH_KEY=$HOME/.ssh/mgalloy-20240904
+if [ -a "$SSH_KEY" ]; then
   DESKTOP=`uname -n`
-  $HOMEBREW/bin/keychain --quiet --agents ssh ~/.ssh/id_rsa
+  $HOMEBREW/bin/keychain --quiet --agents ssh "$SSH_KEY"
   source $HOME/.keychain/$DESKTOP-sh
 else
   echo "Keys not present; password-less login not available."
