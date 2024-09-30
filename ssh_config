@@ -34,23 +34,8 @@ Host dusk
   ForwardX11 yes
   ForwardX11Trusted yes
 
-Host kaula
-  HostName kaula.hao.ucar.edu
-  ForwardX11 yes
-  ForwardX11Trusted yes
-
 Host mahi
   HostName mahi.hao.ucar.edu
-  ForwardX11 yes
-  ForwardX11Trusted yes
-
-Host compdata
-  HostName compdata.hao.ucar.edu
-  ForwardX11 yes
-  ForwardX11Trusted yes
-
-Host mlsodata
-  HostName mlsodata.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
 
@@ -91,6 +76,16 @@ Host sundog3
 
 Host datertot
   HostName datertot.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host nicole
+  HostName nicole.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host hazel
+  HostName hazel.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
 
