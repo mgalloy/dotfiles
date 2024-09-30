@@ -1,7 +1,14 @@
+if [ -d /opt/homebrew ]; then
+  HOMEBREW=/opt/homebrew
+else
+  HOMEBREW=/usr/local
+fi
+
 # setup for keychain
-if [ -a $HOME/.ssh/id_rsa ]; then
+SSH_KEY=$HOME/.ssh/mgalloy-20240904
+if [ -a "$SSH_KEY" ]; then
   DESKTOP=`uname -n`
-  /usr/local/bin/keychain --quiet --agents ssh ~/.ssh/id_rsa
+  $HOMEBREW/bin/keychain --quiet --agents ssh "$SSH_KEY"
   source $HOME/.keychain/$DESKTOP-sh
 else
   echo "Keys not present; password-less login not available."
@@ -24,7 +31,8 @@ export HISTSIZE=2000
 
 export EDITOR="emacs -nw"
 
-export PATH=.:$HOME/bin:$HOME/software/bin:/usr/local/bin:/usr/local/sbin:/usr/games:$PATH
+export PATH=.:$HOME/bin:$HOME/software/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/games:/opt/homebrew/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/lib:$HOME/lib64
 
 export BASH_SILENCE_DEPRECATION_WARNING=1

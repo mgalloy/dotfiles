@@ -12,8 +12,8 @@ Host svn.code.sf.net
   User michaelgalloy
 
 Host michaelgalloy.com
-  User michgal2
-  Port 2233
+  HostName ssh.us.stackcp.com
+  User michaelgalloy.com
 
 Host github.com
   ForwardX11 no
