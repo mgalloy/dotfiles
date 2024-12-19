@@ -67,14 +67,14 @@ if [ -d $HOME/software/bin ]; then
 fi
 
 # setup CUDA
-if [ -d $CUDA_DIR ]; then
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_DIR/lib64
-  export PATH=$CUDA_DIR/bin:$PATH
-else
-  if [ "x$SSH_TTY" != "x" ]; then
-    echo "CUDA not present in $CUDA_DIR"
-  fi
-fi
+#if [ -d $CUDA_DIR ]; then
+#  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_DIR/lib64
+#  export PATH=$CUDA_DIR/bin:$PATH
+#else
+#  if [ "x$SSH_TTY" != "x" ]; then
+#    echo "CUDA not present in $CUDA_DIR"
+#  fi
+#fi
 
 # setup mglib
 export MGLIB_DIR=$HOME/software/mglib
@@ -97,33 +97,33 @@ else
 fi
 
 # setup TaskDL
-export TASKDL2_DIR=$HOME/projects/taskdl-2.4/install
-if [ -d $TASKDL2_DIR ]; then
-  export PATH=$TASKDL2_DIR/bin:$PATH
-else
-  if [ "x$SSH_TTY" != "x" ]; then
-    echo "TaskDL not present in $TASKDL2_DIR"
-  fi
-fi
+#export TASKDL2_DIR=$HOME/projects/taskdl-2.4/install
+#if [ -d $TASKDL2_DIR ]; then
+#  export PATH=$TASKDL2_DIR/bin:$PATH
+#else
+#  if [ "x$SSH_TTY" != "x" ]; then
+#    echo "TaskDL not present in $TASKDL2_DIR"
+#  fi
+#fi
 
 # setup mpiDL
-export MPIDL_DIR=$HOME/software/mpidl-par
-if [ -d $MPIDL_DIR ]; then
-  export PATH=$PATH:$MPIDL_DIR/bin
-else
-  if [ "x$SSH_TTY" != "x" ]; then
-    echo "mpiDL not present in $MPIDL_DIR"
-  fi
-fi
+#export MPIDL_DIR=$HOME/software/mpidl-par
+#if [ -d $MPIDL_DIR ]; then
+#  export PATH=$PATH:$MPIDL_DIR/bin
+#else
+#  if [ "x$SSH_TTY" != "x" ]; then
+#    echo "mpiDL not present in $MPIDL_DIR"
+#  fi
+#fi
 
 # setup rIDL
-if [ -d $HOME/projects/ridl/install ]; then
-  export MANPATH=$HOME/projects/ridl/install/share/man:$MANPATH
-else
-  if [ "x$SSH_TTY" != "x" ]; then
-    echo "rIDL not present in $HOME/projects/ridl/install"
-  fi
-fi
+#if [ -d $HOME/projects/ridl/install ]; then
+#  export MANPATH=$HOME/projects/ridl/install/share/man:$MANPATH
+#else
+#  if [ "x$SSH_TTY" != "x" ]; then
+#    echo "rIDL not present in $HOME/projects/ridl/install"
+#  fi
+#fi
 
 # setup ucomp
 if [ -a $HOME/software/ucomp-pipeline/bin/ucomp-completion.bash ]; then
