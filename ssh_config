@@ -89,5 +89,10 @@ Host hazel
   ForwardX11 yes
   ForwardX11Trusted yes
 
+Host tango
+  HostName tango.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
 Host gate
    HostName gate.ucar.edu
