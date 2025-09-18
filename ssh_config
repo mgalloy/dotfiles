@@ -94,5 +94,10 @@ Host tango
   ForwardX11 yes
   ForwardX11Trusted yes
 
+Host tank
+  HostName tank.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
 Host gate
    HostName gate.ucar.edu
