@@ -168,14 +168,16 @@ else
   ANACONDA_DIR=/opt/anaconda3
 fi
 
-__conda_setup="$(${ANACONDA_DIR}/bin/conda 'shell.bash' 'hook' 2> /dev/null)"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/mgalloy/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "${ANACONDA_DIR}/etc/profile.d/conda.sh" ]; then
-        . "${ANACONDA_DIR}/etc/profile.d/conda.sh"
+    if [ -f "/Users/mgalloy/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/mgalloy/opt/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="${ANACONDA_DIR}/bin:$PATH"
+        export PATH="/Users/mgalloy/opt/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
