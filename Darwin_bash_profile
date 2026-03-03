@@ -140,6 +140,8 @@ else
   echo "git completion not present"
 fi
 
+export PATH="$PATH:/Applications/Obsidian.app/Contents/MacOS"
+
 # setup heasoft (ftools, etc.)
 HEASOFT_DIR=$HOME/software/heasoft-install/x86_64-apple-darwin14.1.0
 if [ -d $HEASOFT ]; then
