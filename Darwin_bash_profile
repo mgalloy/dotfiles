@@ -57,6 +57,18 @@ function iterm_badge {
   printf "\e]1337;SetBadgeFormat=%s\a" $(echo "$@" | base64)
 }
 
+# setup mark
+mark() {
+    case "$1" in
+        list|add|rm|help|-h|--help)
+            command mark "$@"
+            ;;
+        *)
+            cd "$(command mark "$@")"
+            ;;
+    esac
+}
+
 # add TeX tools to path
 TEXLIVE_BINDIR=/usr/local/texlive/current/bin/universal-darwin
 if [ -d $TEXLIVE_BINDIR ]; then
