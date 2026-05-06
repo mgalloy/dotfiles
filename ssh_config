@@ -30,7 +30,7 @@ Host kodiak
   ForwardX11Trusted yes
 
 Host dusk
-  HostName dusk.mlso.ucar.edu
+  HostName dusk.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
 
