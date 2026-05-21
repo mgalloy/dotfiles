@@ -54,6 +54,18 @@ function iterm_badge {
 # pbcopy via iTerm2
 alias pbcopy="it2copy"
 
+# setup mark
+mark() {
+    case "$1" in
+        list|add|rm|help|-h|--help)
+            command mark "$@"
+            ;;
+        *)
+            cd "$(command mark "$@")"
+            ;;
+    esac
+}
+
 # contrib software
 if [ -d /opt/local/bin ]; then
   export PATH=/opt/local/bin:$PATH
