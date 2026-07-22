@@ -1,5 +1,4 @@
-u=rwx,g=rwx,o=rx
-umask 0002
+umask u=rwx,g=rwx,o=rx
 
 # setup a better command line
 export PS1="\[\e]1;\h:\W\a\e]2;\h:\w\a\e[31;1m\]\W\$\[\e[0m\] "
