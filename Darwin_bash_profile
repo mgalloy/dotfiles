@@ -196,3 +196,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# add Claude to PATH
+export PATH="$HOME/.local/bin:$PATH"
