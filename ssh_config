@@ -104,5 +104,10 @@ Host tank
   ForwardX11 yes
   ForwardX11Trusted yes
 
+Host api-internal
+  HostName api-internal.mlso.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
 Host gate
    HostName gate.ucar.edu
