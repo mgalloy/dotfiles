@@ -36,6 +36,8 @@ Host dusk
 
 Host mahi
   HostName mahi.hao.ucar.edu
+  User mgalloy
+  IdentityFile ~/.ssh/id_rsa2
   ForwardX11 yes
   ForwardX11Trusted yes
 
@@ -101,6 +103,11 @@ Host tango
 
 Host tank
   HostName tank.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host snapon
+  HostName snapon.hao.ucar.edu
   ForwardX11 yes
   ForwardX11Trusted yes
 
