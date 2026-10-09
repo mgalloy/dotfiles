@@ -37,7 +37,9 @@ Host dusk
 Host mahi
   HostName mahi.hao.ucar.edu
   User mgalloy
-  IdentityFile ~/.ssh/id_rsa2
+  IdentityFile /Users/mgalloy/.ssh/mgalloy-20240904
+  UseKeychain yes
+  AddKeysToAgent yes
   ForwardX11 yes
   ForwardX11Trusted yes
 
@@ -118,3 +120,9 @@ Host api-internal
 
 Host gate
    HostName gate.ucar.edu
+   User mgalloy
+   ForwardX11 no
+   ControlMaster auto
+   ControlPath ~/.ssh/cm-%C
+   ControlPersist yes
+   ServerAliveInterval 60
