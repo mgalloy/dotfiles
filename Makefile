@@ -47,7 +47,7 @@ install:
 	cp ipython_qtconsole_config.py ~/.ipython/profile_default
 
 	mkdir -p ~/.config/pip/
-	cp pip.config ~/.config/pip/
+	cp pip.conf ~/.config/pip/
 
 	# Anaconda license
 	mkdir -p ~/.continuum
