@@ -1,0 +1,127 @@
+Host *
+  ForwardX11 yes
+
+ForwardAgent yes
+HashKnownHosts yes
+
+Host idldev.com
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host svn.code.sf.net
+  User michaelgalloy
+
+Host michaelgalloy.com
+  HostName ssh.us.stackcp.com
+  User michaelgalloy.com
+
+Host github.com
+  ForwardX11 no
+  ForwardX11Trusted no
+
+Host seabass
+  HostName seabass.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host kodiak
+  HostName kodiak.mlso.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host dusk
+  HostName dusk.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host mahi
+  HostName mahi.hao.ucar.edu
+  User mgalloy
+  IdentityFile /Users/mgalloy/.ssh/mgalloy-20240904
+  AddKeysToAgent yes
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host dawn
+  HostName dawn.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host array7
+  HostName array7.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sunrise
+  HostName sunrise.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host twilight
+  HostName twilight.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sunset
+  HostName sunset.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sundog1
+  HostName sundog1.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sundog2
+  HostName sundog2.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host sundog3
+  HostName sundog3.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host datertot
+  HostName datertot.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host nicole
+  HostName nicole.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host hazel
+  HostName hazel.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host tango
+  HostName tango.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host tank
+  HostName tank.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host snapon
+  HostName snapon.hao.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host api-internal
+  HostName api-internal.mlso.ucar.edu
+  ForwardX11 yes
+  ForwardX11Trusted yes
+
+Host gate
+   HostName gate.ucar.edu
+   User mgalloy
+   ForwardX11 no
+   ControlMaster auto
+   ControlPath ~/.ssh/cm-%C
+   ControlPersist yes
+   ServerAliveInterval 60

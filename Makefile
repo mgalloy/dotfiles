@@ -29,7 +29,7 @@ install:
 
 	# setup SSH
 	mkdir -p ~/.ssh
-	cp ssh_config ~/.ssh/config
+	cp `uname`_ssh_config ~/.ssh/config
 
 	# setup git
 	./git_setup.sh
