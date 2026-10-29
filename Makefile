@@ -46,6 +46,9 @@ install:
 	cp ipython_notebook_config.py ~/.ipython/profile_default
 	cp ipython_qtconsole_config.py ~/.ipython/profile_default
 
+	mkdir -p ~/.config/pip/
+	cp pip.config ~/.config/pip/
+
 	# Anaconda license
 	mkdir -p ~/.continuum
 	cp licenses/license_academic_20150715172552.txt ~/.continuum
