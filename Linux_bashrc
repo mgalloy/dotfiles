@@ -203,3 +203,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # add Claude to PATH
 export PATH="$HOME/.local/bin:$PATH"
+
+# add go to PATH
+export PATH=${PATH}:/home/mgalloy/.go/bin:/home/mgalloy/go/bin
