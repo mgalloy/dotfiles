@@ -37,7 +37,7 @@ Host dusk
 Host mahi
   HostName mahi.hao.ucar.edu
   User mgalloy
-  IdentityFile /Users/mgalloy/.ssh/mgalloy-20240904
+  IdentityFile /home/mgalloy/.ssh/mgalloy-20240904
   AddKeysToAgent yes
   ForwardX11 yes
   ForwardX11Trusted yes
